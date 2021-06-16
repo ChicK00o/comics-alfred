@@ -72,6 +72,8 @@ def comics():
 	parser.add_option("-l", "--load", dest="load", 
 				  help="load a comic", metavar="COMIC_ID")
 	(options, args) = parser.parse_args()
+	# print(options)
+	# print(args)
 
 	if(options.load == None):
 		searchComics(options.search)

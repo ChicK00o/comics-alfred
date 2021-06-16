@@ -13,5 +13,5 @@ def run():
 	import os
 	d = feedparser.parse('http://www.hoodcomputing.com/garfield.php')
 	strip = re.match('.*?src="(.*?)".*' , d['entries'][0]['summary_detail']['value'], re.IGNORECASE).groups(0)[0]
-	os.system('curl -s ' + strip + ' --O strip.png')
-	os.system('qlmanage -p strip.png')
+	os.system('curl -s ' + strip + ' -o strip.png')
+	# os.system('qlmanage -p strip.png')

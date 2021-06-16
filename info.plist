@@ -6,6 +6,45 @@
 	<string>com.benzi.a2w.comics</string>
 	<key>connections</key>
 	<dict>
+		<key>1D80A771-F788-4A06-B74D-D2A4056E1B2F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8910DBAA-3166-4104-9B48-DB988B49F92C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6CEED051-58AC-4637-9944-D7726F7E3D62</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E418A003-7AE2-4B3A-B838-9017B8EFF44B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8910DBAA-3166-4104-9B48-DB988B49F92C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E7EC55A9-84A3-431E-891C-BD6C560497A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>891100E4-9090-4EB5-8249-C2FB98699674</key>
 		<array/>
 		<key>BAF05A36-E61B-48BB-BAE5-7268E12BBE60</key>
@@ -17,6 +56,47 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BB14301F-7813-4624-BC4D-B250B2E1D563</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1D80A771-F788-4A06-B74D-D2A4056E1B2F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E418A003-7AE2-4B3A-B838-9017B8EFF44B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>408FF760-DD3A-4DB8-8CC2-7D5ECD3FE9E6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E7EC55A9-84A3-431E-891C-BD6C560497A6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CEED051-58AC-4637-9944-D7726F7E3D62</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -33,31 +113,34 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>script</key>
-				<string>python comics.py "{query}"</string>
-				<key>type</key>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>891100E4-9090-4EB5-8249-C2FB98699674</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
 				<integer>63</integer>
-				<key>keyword</key>
-				<string>comics</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Loading comic strip feed, please wait...</string>
 				<key>script</key>
 				<string>python comics.py</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>View the latest strips from a number of comics</string>
 				<key>title</key>
@@ -71,21 +154,257 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>BAF05A36-E61B-48BB-BAE5-7268E12BBE60</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>python comics.py -l "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>891100E4-9090-4EB5-8249-C2FB98699674</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>cr</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading comic strip feed, please wait...</string>
+				<key>script</key>
+				<string>python comics.py</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>View the latest strips from a number of comics</string>
+				<key>title</key>
+				<string>Comics</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8910DBAA-3166-4104-9B48-DB988B49F92C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>showWebView</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>mr.pennyworth.WebView</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>408FF760-DD3A-4DB8-8CC2-7D5ECD3FE9E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>restartComic</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>BB14301F-7813-4624-BC4D-B250B2E1D563</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>python comics.py -l "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E7EC55A9-84A3-431E-891C-BD6C560497A6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>id</key>
+					<string>restartComic</string>
+					<key>query</key>
+					<string>file:///Users/rohit.bhosle/projects/personal/comics-alfred/strip.html</string>
+					<key>wid</key>
+					<string>com.benzi.a2w.comics</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6CEED051-58AC-4637-9944-D7726F7E3D62</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>E418A003-7AE2-4B3A-B838-9017B8EFF44B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1D80A771-F788-4A06-B74D-D2A4056E1B2F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>1D80A771-F788-4A06-B74D-D2A4056E1B2F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>255</integer>
+			<key>ypos</key>
+			<integer>555</integer>
+		</dict>
+		<key>408FF760-DD3A-4DB8-8CC2-7D5ECD3FE9E6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>850</integer>
+			<key>ypos</key>
+			<integer>525</integer>
+		</dict>
+		<key>6CEED051-58AC-4637-9944-D7726F7E3D62</key>
+		<dict>
+			<key>xpos</key>
+			<integer>695</integer>
+			<key>ypos</key>
+			<integer>555</integer>
+		</dict>
+		<key>8910DBAA-3166-4104-9B48-DB988B49F92C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>330</integer>
+			<key>ypos</key>
+			<integer>525</integer>
+		</dict>
 		<key>891100E4-9090-4EB5-8249-C2FB98699674</key>
 		<dict>
+			<key>xpos</key>
+			<integer>530</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>345</integer>
 		</dict>
 		<key>BAF05A36-E61B-48BB-BAE5-7268E12BBE60</key>
 		<dict>
+			<key>xpos</key>
+			<integer>330</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>345</integer>
+		</dict>
+		<key>BB14301F-7813-4624-BC4D-B250B2E1D563</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>525</integer>
+		</dict>
+		<key>E418A003-7AE2-4B3A-B838-9017B8EFF44B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>770</integer>
+			<key>ypos</key>
+			<integer>555</integer>
+		</dict>
+		<key>E7EC55A9-84A3-431E-891C-BD6C560497A6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>525</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
